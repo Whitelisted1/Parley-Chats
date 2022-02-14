@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parley | {user}</title>
+    </head>
+    <style>
+        .username {
+            color: {usercolor}
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            datecreated = document.getElementById('datecreated')
+            console.log(datecreated.innerText);
+            datecreated.innerText = "Account created on " + new Date(parseInt(datecreated.innerText) * 1000).toLocaleString().replace(",", " at")
+        }
+        window.onkeydown = function(e) {
+            if (event.getModifierState("CapsLock")) {
+                capsLock = true;
+            } else capsLock = false;
+        };
+
+        
+    </script>
+    <body style="text-align: center;">
+        <h2><b id="username" class="username">{user}</b></h2>
+        <h3 id="datecreated">{timestamp}</h3>
+        <br>
+        <button id="privatemessage">Message Privately</button>
+        <br>
+        <button id="friendrequest">Send a Friend Request</button>
+        <br><br>
+        * Buttons do not work yet
+    </body>
+</html>

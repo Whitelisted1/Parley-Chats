@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parley | Menu</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+        <link rel="manifest" href="/icon/site.webmanifest">
+        <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#008987">
+        <meta name="theme-color" content="#ffffff">
+
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main" style="text-align: center;">
+            <script src="/main.js"></script>
+            <h1>Parley</h1>
+            <h3>Please Enter your username to continue</h3>
+            <br><br>
+            <form action="./testlogin" method="POST" autocomplete="off">
+                <input type="text" name="username" placeholder="Username" maxlength="16">
+                <br>
+                <input type="password" name="password" placeholder="Password" autocomplete="on">
+                <pre id="capslockwarning" class="hidden">Warning: Caps lock is <b style="color: red;">ON</b></pre>
+                <br><br>
+                <input type="submit" title="Submit" value="Submit">
+            </form>
+            <br>
+            or <a href="./signup">sign up</a>
+            <br><br>
+            <div>Due to this site being in BETA, your account may be erased due to updates.
+                <br>Last update was 2/9/22
+            </div>
+            <br><br>
+            <div id="errormessage" style="color: red"></div>
+            <script type="text/javascript">
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                var failreason = urlParams.get('fail');
+                document.getElementById("errormessage").innerText = failreason;
+
+                window.onkeydown = function(e) {
+                    if (event.getModifierState("CapsLock")) {
+                        capsLock = true;
+                    } else capsLock = false;
+                    capsLockWarning = document.getElementById("capslockwarning");
+                    if(capsLock){
+                        document.getElementById('capslockwarning').classList.remove("hidden");
+                    } else {
+                        document.getElementById('capslockwarning').classList.add("hidden");
+                    }
+                };
+
+            </script>
+        </div>
+    </body>
+</html>

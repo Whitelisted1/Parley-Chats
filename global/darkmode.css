@@ -1,0 +1,116 @@
+html {
+    background-color: rgba(46,48,54,255);
+    color: white;   
+}
+hr {
+    border-color: rgba(51,53,58,255);
+    background-color: rgba(51,53,58,255);
+    color: rgba(51,53,58,255);
+}
+a:link {
+    color: aqua;
+}
+a:visited {
+    color: aqua;
+}
+a:hover {
+    color: darkcyan;
+    text-decoration: underline;
+}
+a:active{
+    color:yellow;
+}
+button {
+    background-color: rgba(46,48,54,255);
+    color: white;
+}
+input {
+    background-color: rgba(46,48,54,255);
+    color: white;
+}
+.chatcolors {
+    background-color: rgba(55,56,63,255);
+    border: 10px solid rgb(73, 73, 73);
+}
+/* Works on Firefox */
+* {
+scrollbar-width: 18px;/*thin;*/
+scrollbar-color: rgb(29, 29, 29) rgb(44, 44, 44);
+}
+*::-webkit-scrollbar {
+width: 18px;
+}
+
+*::-webkit-scrollbar-track {
+background: rgb(44, 44, 44);        /* color of the tracking area */
+border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: rgb(29, 29, 29);    /* color of the scroll thumb */
+border-radius: 1px;       /* roundness of the scroll thumb */
+border-radius: 10px;
+/* border: 1px solid #000066;  *//* creates padding around scroll thumb */
+}
+
+.user {
+    text-decoration: none;
+}
+
+select {
+    background-color: rgba(46,48,54,255);
+    color: white;
+}
+
+#menu{
+    background: rgb(81, 81, 88);
+}
+
+#menuToggle a{
+    text-decoration: none;
+    color: #9ea2a8;
+
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover{
+    color: rgb(255, 255, 255);
+}
+
+#menuToggle span{
+    background: #cdcdcd;
+}
+
+#admincolor {
+    /* animation: admincolors 2s infinite; */
+    background: #121FCF;
+    background: -webkit-linear-gradient(to right, #0AB0C9 0%, #315eda 100%);
+    background: -moz-linear-gradient(to right, #0AB0C9 0%, #315eda 100%);
+    background: linear-gradient(to right, #0AB0C9 0%, #315eda 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mention {
+    background-color: rgb(131, 131, 1);
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+/* The animation resets whenever a message is sent. Not sure how to fix this */
+/* @keyframes admincolors {
+    0% { color: #F60000; }
+    25% { color: #268526; }
+    50% { color: #3783FF; } 
+    75% { color: #824ee4; }
+    100% { color: #F60000; }
+  } */

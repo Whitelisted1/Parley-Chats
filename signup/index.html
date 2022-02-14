@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parley | Signup</title>
+    </head>
+    <body>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+        <div id="main" style="text-align: center;">
+            <script src="./main.js"></script>
+            <h1>Parley Signup</h1>
+            <h3>Please Enter your name to signup</h3>
+            <br><br>
+            <form action="/testsignup" method="POST">
+                <input type="text" name="username" placeholder="Username" maxlength="16">
+                <br>
+                <input type="password" name="password" placeholder="Password">
+                <pre id="capslockwarning" class="hidden">Warning: Caps lock is <b style="color: red;">ON</b></pre>
+                <br><br>
+                <input type="submit" title="Submit">
+            </form>
+            <br>
+            or <a href="/index.html">login</a>
+            <br><br>
+            <div id="errormessage" style="color: red"></div>
+            <br><h3 style="color: red"><b> &#10071; DO NOT USE YOUR REAL NAME &#10071;</b></h3>
+            <script type="text/javascript">
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                var failreason = urlParams.get('fail');
+                document.getElementById("errormessage").innerHTML = failreason;
+                
+                window.onkeydown = function(e) {
+                    if (event.getModifierState("CapsLock")) {
+                        capsLock = true;
+                    } else capsLock = false;
+                    capsLockWarning = document.getElementById("capslockwarning");
+                    if(capsLock){
+                        document.getElementById('capslockwarning').classList.remove("hidden");
+                    } else {
+                        document.getElementById('capslockwarning').classList.add("hidden");
+                    }
+                };
+            </script>
+        </div>
+    </body>
+</html>

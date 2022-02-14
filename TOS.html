@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parley | TOS</title>
+    </head>
+    <body style="text-align: center;">
+        <style>
+            html {
+                font-family: "PTSans-Bold", sans-serif;
+            }
+            @font-face {
+                font-family: "PTSans-Bold";
+                src: url(/fonts/PTSans-Bold.ttf);
+            }
+        </style>
+        <br>
+        <h2>By continuing you accept the following terms:</h2>
+        <br>
+        <h3>- The creators of this website shall not be held accountable, should you get in trouble for using it
+            <br>- This website shall not be put to blame for class grades, if applicable
+            <br>- Work always comes before this website; please get your work done
+            <br>- YOU are responsible if you were to get into "trouble" for using this application
+            <br>- You will not use your public name and/or identifying info in your username
+            <br>- You are responsible if files or messages contain any sensitive information
+            <br>- No asking for special perks or privileges
+            <br>- In public and private channels, no swearing or bypassing the filter
+               <pre style="color: rgb(91, 101, 109)"> ^ Only allowed if all users agree in a <b>private</b> chat</pre>
+        </h3>
+        <h4>*The creators of this program are not responsible for when people use this website</h4>
+        <br>    
+        <input id="acceptedterms" style="padding-left:20%; padding-right:20%;" type="checkbox"> I accept these terms and rules, and intend to follow them. 
+        <br>I also understand that the admins of this website have the right to mute and/or ban me if they find that I am not following the rules.
+        <br><br><button onclick="accept()">Continue</button>
+
+        <div style="text-align: center; color: red;">
+            <br>
+            <b>This website is in BETA. Your data will be deleted in future updates.</b>
+        </div>
+        <script>
+            function accept(){
+                if(document.getElementById("acceptedterms").checked){
+                document.cookie = "TOS=1; path=\"/\";"
+                window.location = "/index.html"
+                }
+            }
+        </script>
+    </body>
+</html>

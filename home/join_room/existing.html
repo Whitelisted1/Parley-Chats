@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat Room | Join an existing room</title>
+    </head>
+    <body>
+        <script src="/jquery"></script>
+        <div id="main" style="text-align: center;">
+            <!-- <a href="{link}" style="text-decoration: none; color: inherit"><pre id="chat" style="background-color: lightgray; width: 400px; height: 175px; border: 10px solid gray; padding: 10px; overflow: auto; white-space:pre-wrap; display: inline-block; vertical-align: top;"><h2>{name}</h2><h3>{users}</h3><h4>{time}</h4></pre></a> -->
+            <h2>Private Rooms</h2>
+            <h3><a href="/home/existingrooms/public">Or view public rooms</a></h3>
+            <!-- {templatehere} -->
+
+            <div id="errormessage" style="color: red"></div>
+            <script type="text/javascript">
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                var failreason = urlParams.get('fail');
+                document.getElementById("errormessage").innerText = failreason;
+            </script>
+        </div>
+    </body>
+</html>

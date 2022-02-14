@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parley | Updates</title>
+    </head>
+    <body style="text-align: center;">
+        <style>
+            html {
+                font-family: "PTSans-Bold", sans-serif;
+            }
+            @font-face {
+                font-family: "PTSans-Bold";
+                src: url(/fonts/PTSans-Bold.ttf);
+            }
+        </style>
+        </div>
+        <br><br>
+        <h1 style="color: rgb(85, 0, 255);"><b><u>Recent Updates</u></b></h1>
+        <br><br>
+        <!-- <hr>     -->
+        <h3 style="color: rgb(85, 0, 255);"><b><u>Update 1.51</u></b></h2>
+
+        <h3>- Navigation menu (top left) has been redesigned to make it easier to go where you want to go.
+            <br>- New colors have been added
+            <br>- This page has been added when loading up the website
+            <br>- The old Updates tab has been removed from the navigation menu, and has been replaced with this page.
+            <br>
+        </h3>
+        <h2 style="color: rgb(85, 0, 255);">Bug Fixes and Optimizations</h2>
+        <h3> - A bug where the public chat room was not visible has been squashed!</h3>
+        <br><br>
+        <button onclick="continuetomain()">Continue To Main Page</button>
+        
+        <br><br><hr>
+
+        <h1 style="color: rgb(85, 0, 255);"><b><u>Past Updates</u></b></h1>
+        <br><br>
+
+        <h3 style="color: rgb(85, 0, 255);"><b><u>Update 1.50</u></b></h2>
+
+        <h3>- Profiles now clickable (with a menu! (buttons don't work yet))
+            <br>- Caps lock notification will now show up when typing in your account information (on sign in)
+            <br>- You can now @{username} people, and it will glow yellow and play a little sound
+            <br>- You can no longer have alt accounts
+
+            <br>
+
+            </h3>
+            <h2 style="color: rgb(85, 0, 255);">Bug Fixes and Optimizations</h2>
+            <h3> - Chat should no longer lag as much when they're many people on at the same time
+                <br>- The filter should no longer censor everything that has some profanity in it (example: grass, brass, glass, etc.)
+                <br>- Fixed message stacking
+                <br>- Stopped uploads when user is muted
+                <br>- Mention sounds (@{username}) do not play on page load
+                <br>- Older message will automatically be cleared after 100 new messages (improves lag)
+            </h3>
+    
+    <script>
+        function continuetomain(){
+            document.cookie = "updatetime={updatetime};"
+            window.location="/index.html";
+        }
+    </script>
+    </body>
+</html>

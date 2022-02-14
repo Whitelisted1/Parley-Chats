@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile | {user}</title>
+    </head>
+    <body style="text-align: center;">
+        <script>
+            function getCookie(name) {
+              const value = `; ${document.cookie}`;
+              const parts = value.split(`; ${name}=`);
+              if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+            
+            function logout(){
+                console.log("hi");
+                document.cookie = "Token=undefined; TOS=0; path=/";
+                window.location="/index.html?fail=Successfully logged out.";
+            }
+
+            function changepass() {
+                if(document.getElementById("new").innerText == document.getElementById("confirmnew")){
+                    document.getElementById("changepass").submit()
+                } else {
+                    document.getElementById("telluser").innerText = "Passwords do not match!"
+                }
+            }
+
+            window.onload = function() {
+                document.getElementById("theme").innerText = "Theme: " + getCookie("theme")
+                document.getElementById("namecolor").innerHTML = "Name Color: " + getCookie("chatcolor") + ' <a href="/account/changecolor"><button>Change Color</button></a>'
+            }
+          </script>
+        <h2>Options</h2>
+        <div>
+            <pre id="namecolor">Name Color:  <a href="/account/changecolor"><button>Change Color</button></a></pre>
+            <pre id="theme">Theme: </pre>
+            <br><br>
+            <!-- <form id="changpass" action="/api/changepassword" method="POST">
+                Change account password<br><br>
+                <input type="password" name="currentpass" placeholder="Current Password">
+                <br>
+                <input type="password" name="newpass" id="new" placeholder="New Password"><br>
+                <input type="password" id="confirmnew" placeholder="Confirm New Password">
+                <br><br><button type="button" onclick="changepass()">Change Password</button>
+            </form> -->
+            <br><br><br>
+            <pre><button onclick="logout()">Log Out</button></pre>
+        </div>
+        <br>
+        <div id="telluser" style="color: red;"></div>
+    </body>
+</html>

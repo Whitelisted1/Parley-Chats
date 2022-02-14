@@ -1,0 +1,105 @@
+.chatcolors {
+    background-color: lightgray;
+    border: 10px solid gray;
+}
+.user {
+    color: rgb(41, 41, 255);
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(0, 0, 155);
+    text-decoration: underline;
+}
+a:link {
+    color: blue
+}
+a:visited {
+    color: blue
+}
+a:active {
+    color: cyan;
+}
+
+
+* {
+scrollbar-width: 18px;/*thin;*/
+}
+*::-webkit-scrollbar {
+width: 18px;
+}
+
+*::-webkit-scrollbar-track {
+background: rgb(173, 173, 173);        /* color of the tracking area */
+border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: rgb(121, 121, 121);    /* color of the scroll thumb */
+border-radius: 1px;       /* roundness of the scroll thumb */
+border-radius: 10px;
+/* border: 1px solid #000066;  *//* creates padding around scroll thumb */
+}
+
+#menu{
+    background: #a7a7a7;
+ }
+
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #4b4c52;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: rgb(0, 0, 0);
+ }
+
+ #menuToggle span{
+    background: #44454d;
+}
+
+/* #admincolor {
+    background: #121FCF;
+    background: -webkit-linear-gradient(to right, #0AB0C9 0%, #4d7afa 100%);
+    background: -moz-linear-gradient(to right, #0AB0C9 0%, #4d7afa 100%);
+    background: linear-gradient(to right, #0AB0C9 0%, #4d7afa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+#admincolor {
+    /* animation: admincolors 2s infinite; */
+    background: #121FCF;
+    background: -webkit-linear-gradient(to right, #0AB0C9 0%, #315eda 100%);
+    background: -moz-linear-gradient(to right, #0AB0C9 0%, #315eda 100%);
+    background: linear-gradient(to right, #0AB0C9 0%, #315eda 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mention {
+    background-color: rgb(202, 202, 0);
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+/* @keyframes admincolors {
+    0% { color: #F60000; }
+    25% { color: #268526; }
+    50% { color: #3783FF; } 
+    75% { color: #824ee4; }
+    100% { color: #F60000; }
+  } */

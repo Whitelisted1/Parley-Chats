@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parley | Join a Room</title>
+    </head>
+    <body>
+        <script src="/jquery"></script>
+        <div id="main" style="text-align: center;">
+            <h2>Join a room</h2>
+            <h3>Enter the room code</h3>
+            <br>
+            <form action="/api/joinroom/check" method="POST" autocomplete="off">
+                <input type="text" name="pin" pattern="[0-9]{9}" maxlength="9" style="height:100px; width:450px; font-size:75px; text-align: center;">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <br><br>
+            <div id="errormessage" style="color: red"></div>
+            <script type="text/javascript">
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                var failreason = urlParams.get('fail');
+                document.getElementById("errormessage").innerText = failreason;
+            </script>
+            <br><br>
+            Or <a href="/home/existingrooms">join a room that you are in</a>
+        </div>
+    </body>
+</html>

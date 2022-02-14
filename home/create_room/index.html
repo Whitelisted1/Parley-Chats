@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parley | Create a Room</title>
+        <style>
+            .hiddentext {
+                display: none;
+                /* opacity: 0; */
+            }
+        </style>
+    </head>
+    <body style="text-align: center;">
+        <script src="/jquery"></script>
+        <h2>Create a room</h2>
+        <script src="/home/createroom/main.js"></script>
+            <br>
+            <form method="POST" action="/api/createroom/check" autocomplete="off" id="mainform">
+                <input type="text" style="display: none;" name="usersinchat" id="usersinchat">
+                <input style="display: none;" type="radio" value="yes" id="yespublic" name="ispublic">
+                <input style="display:none;" type="radio" value="no" id="nopublic" name="ispublic">
+
+                What would you like the room name to be?
+                <br><br><input type="text" name="roomname" id="roomname" placeholder="Room Name">
+                <br><br><br> Do you want this room to be public?
+                <br><br><input type="button" value="Yes" id="ispublic" onclick="ispublicchange()">
+
+                <div id="notpublic">
+                    <br><br>
+                    <pre id="adduserstext">Who would you like in the group chat? (If this is public this doesn't matter)</pre><br>
+                    <input type="search" id="addusers"> <input form="notpublic" type="submit" id="addusersbutton" onclick="adduser()" value="Add user">
+                    <pre id="listofppl"></pre>
+                </div>
+                <br><br>
+            </form>
+            <button onclick="submitForm();">Submit</button>
+            <br><br><br><div id="telluser" style="color: red;"></div>
+        </div>
+        <div id="hidden" method="POST" style="display: none;">
+            <iframe name="submitframe" id="submitframe"></iframe>
+            <form target="submitframe" action="/api/checkuser" id="checkuser" method="POST"><input type="text" name="usersubmit" id="usersubmit"></form>
+        </div>
+    </body>
+</html>

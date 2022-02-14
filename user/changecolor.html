@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Profile Color | Chat Room</title>
+    </head>
+    <body style="text-align: center;">
+        <br><br><br><br>
+        <h1><b>What color would you like your username to be?</b></h1><Br>
+        <form action="/api/changecolor" method="POST">
+            {selectbox}
+            <br><br>
+            <button onclick="changecolor()" style="width: 200px; height: 100px; font-size: 40px" value="Change Color">Change Color</button>
+        </form>
+        <br><br>
+        <div id="telluser">
+            
+        </div>
+        <script>
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+            // function changecolor(){
+            //     var colorselect = document.getElementById("colorselect");
+            //     var telluser = document.getElementById("telluser");
+            //     if(donated==0){
+            //     var element = colorselect.options[colorselect.selectedIndex].text;
+            //     document.cookie = "chatcolor=" + element.toLowerCase() + '; path=/;'
+            //     // document.getElementById("theme").innerText = "Theme: " + getCookie("theme")
+            //     telluser.innerHTML = "Changed username color to <b style=\"color:" + element + "\">" + element + "</b>."
+            //     } else {
+            //         var color = document.getElementById("colorselect").value;
+            //         document.cookie = "chatcolor=" + color + '; path=/;'
+            //         telluser.innerHTML = "<b style=\"color:" + color + ";\">" + "Changed username color.</b>"
+            //     }
+            // }
+            setTimeout(() => {
+                color = getCookie("chatcolor");
+                if(color != undefined || color == "default"){
+                    var color = document.getElementById("c" + color);
+                    color.setAttribute("selected", "selected");
+                }
+            }, 0);
+        </script>
+    </body>
+</html>
